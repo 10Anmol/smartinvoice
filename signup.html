@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.container{
+    box-sizing: border-box;
+    height: 570px;
+    width: 60vw;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    /* position: relative; */
+    top: 180px;
+    left: 22vw;
+    position: absolute;
+    z-index: 1;
+    /* border: 2px solid red; */
+}
+.container .cover{
+    box-sizing: border-box;
+    position: absolute;
+    height: 570px;
+    width: 30vw;
+    background-color: rgba(0, 0, 0, 0.114);
+    border-radius: 20px;
+    /* border: 2px solid green; */
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+    transition: transform 0.5s ease-in-out;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and(max-width:1100px) {
+    .container{
+
+    }
+}
+.container .login{
+    padding: 50px;
+    grid-column: 1/2;
+}
+.container .signup{
+    grid-column: 2/3;
+    padding: 50px;
+
+}
+.container .login .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.container h2{
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+.container .login input{
+    height: 5vh;
+    width: 20vw;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.container .login input{
+    font-size: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.pas{
+    margin-bottom: 50px;
+}
+.login button{
+    width: 15vw;
+    height: 5vh;
+    background-color: #2755ed;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: white;
+    font-size: 15px;
+
+}
+.login p span{
+    color: #2755ed;
+
+}
+.signup .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.signup .box input{
+    height: 5vh;
+    width: 20vw;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 15px;
+    box-sizing: border-box;
+
+}
+.signup .box .name{
+    display: flex;
+    gap: 10px;
+}
+.signup .box .name input{
+    width: 10vw;
+}
+.signup .box .accept{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.signup .box .accept input{
+    display: inline;
+    height: 15px;
+    width: auto;
+}
+.signup .box button{
+    width: 15vw;
+    height: 5vh;
+    background-color: #2755ed;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 15px;
+    color: white;
+} 
+.login .pas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.login .pas img{
+    width: 100%;
+    position: absolute;
+    left: 8vw;
+    height: 20px;
+    object-fit: contain;
+    z-index: 0;
+}
+.signup .pass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.signup .pass img{
+    width: 100%;
+    position: absolute;
+    left: 8vw;
+    height: 20px;
+    object-fit: contain;
+    z-index: 0;
+}
+.signup .confirmpass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.signup .confirmpass img{
+    width: 100%;
+    position: absolute;
+    left: 8vw;
+    height: 20px;
+    object-fit: contain;
+    z-index: 0;
+}
+.cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#btn{
+    /* position: absolute; */
+    /* top: 47vh; */
+    /* left: 30vw; */
+    height: 5vh;
+    width: 10vw;
+    border-radius: 10px;
+    border: 1px solid black;
+    /* content: 'Log in; */
+    font-size: 2vh;
+    background-color: #2755ed8e;
+    color: white;
+    transition: transform 0.5s ease-in-out;
+    z-index: 10000;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+    </style>
+</head>
+<body>
+    <div id="day" class="day">
+        <img src="./10949828_3948.jpg" alt="">
+    </div>
+    <div  id="night" class="night">
+        <img src="./23639672_224z_2201_w023_n001_1704b_p1_1704.jpg" alt="">
+    </div>
+    
+<div class="heading">
+    <h1>Join Our Network of Top Employees</h1>
+    <p>Discover Talented Competators for Your Organization</p>
+</div>
+
+<div class="container" id="box-parent">
+    <div class="login">
+        <div class="box">
+            <h2>Log in</h2>
+            <div class="username">
+                <input type="text" name="" placeholder="Username">
+                <!-- <label for="">Username</label> -->
+            </div>
+            <div class="pas">
+                <input type="password" name="" id="passwords" placeholder="Password">
+                <img src="./eye-icons/hidden.png" alt="" id="eye-icon">
+                <!-- <label for="">Password</label> --> 
+            </div>
+            <button id="dashboard-page" onclick="location.href='./dashboard.html'">SIGN IN</button>
+            <p>Forgot <span>Username/Password</span>?</p>
+
+        </div>
+    </div>
+    <div class="signup">
+        <div class="box">
+            <h2>Sign Up</h2>
+        <div class="name">
+            <input type="text" name=""  placeholder="First Name" >
+            <input type="text" name=""  placeholder="Last Name">
+        </div>
+        <div class="email">
+            <input type="text" name=""  placeholder="E-mail">
+        </div>
+        <div class="pass">
+            <input type="password" name="" id="passwords2" placeholder="Password">
+                <img src="./eye-icons/hidden.png" alt="" id="eye-icon2"> 
+        </div>
+        <div class="confirmpass">
+            <input type="password" name="" id="passwords3" placeholder="Password">
+                <img src="./eye-icons/hidden.png" alt="" id="eye-icon3"> 
+        </div>
+        <div class="accept">
+            <input type="checkbox" name="" id="">
+            <label for="">I accept the Terms of Uses & Privacy Policy </label>
+        </div>
+        <button onclick="location.href='./dashboard.html'">CREATE ACCOUNT</button>
+        </div>
+        
+    </div>
+    <div id="box" class="cover">
+        <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique veritatis numquam et sequi dignissimos sapiente ipsum quos ratione voluptates debitis, repellat obcaecati optio tempore ad laudantium expedita aut assumenda eligendi labore. Provident corrupti magnam quam quibusdam illum ratione unde, perferendis labore delectus blanditiis repellendus aliquid.</p>
+        <button>LOG IN</button> -->
+        <!-- <button class="change" > LOG IN</button> -->
+        <button class="change" id="btn" >LOG IN</button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+let temp=30;
+let inner="SIGN UP";
+let button=document.getElementById("btn");
+let ele=document.getElementById("box");
+button.addEventListener('click',function(){
+    console.log("hi");
+    ele.style.transform = "translateX(" + temp + "vw)";
+    button.style.transform="translateX(" + temp/20 + "vw)";
+    button.innerHTML=inner;
+    if(temp==30){
+        temp=0;
+        inner="LOG IN";
+    }
+    else{
+        temp=30;
+        inner="SIGN UP";
+    }
+});
+button.addEventListener('click',function(){
+    let parent=document.getElementById("box-parent");
+    parent.parentElement.setAttribute("style","filter:blur(2px);");
+    let elements=document.getElementsByTagName("input");
+    let index=0;
+    for(index=0;index<elements.length;index++){
+        elements[index].setAttribute("disabled","disabled");
+        elements[index].value='';
+    }
+    setTimeout( function(){
+        for(index=0;index<elements.length;index++){
+            elements[index].removeAttribute("disabled","disabled");
+            console.log("wooohooo")
+        }
+        parent.parentElement.setAttribute("style","filter:blur(0px);");
+    },800)
+    
+})
+
+
+
+let eyeicon=document.getElementById("eye-icon");
+let pass=document.getElementById("passwords");
+eyeicon.onclick=function(){
+    if(pass.type=="password"){
+        pass.type="text";
+        eyeicon.src="./eye-icons/eye.png";
+    }
+    else{
+        pass.type="password";
+        eyeicon.src="./eye-icons/hidden.png";
+    }
+}
+
+
+
+let eyeicon2=document.getElementById("eye-icon2");
+let pass2=document.getElementById("passwords2");
+eyeicon2.onclick=function(){
+    if(pass2.type=="password"){
+        pass2.type="text";
+        eyeicon2.src="./eye-icons/eye.png";
+    }
+    else{
+        pass2.type="password";
+        eyeicon2.src="./eye-icons/hidden.png";
+    }
+}
+
+
+let eyeicon3=document.getElementById("eye-icon3");
+let pass3=document.getElementById("passwords3");
+eyeicon3.onclick=function(){
+    if(pass3.type=="password"){
+        pass3.type="text";
+        eyeicon3.src="./eye-icons/eye.png";
+    }
+    else{
+        pass3.type="password";
+        eyeicon3.src="./eye-icons/hidden.png";
+    }
+}
+    </script>
+</div> 
+</body>
+</html>
